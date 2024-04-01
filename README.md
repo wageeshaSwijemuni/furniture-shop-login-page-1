@@ -1,32 +1,20 @@
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
-public class FurnitureShopLogin {
-    private static Map<String, String> userCredentials = new HashMap<>();
-
+public class LogoutExample {
     public static void main(String[] args) {
-      // Assume user accounts are already created and stored in a database or similar
-      userCredentials.put("Email");
-      
-      Scanner scanner = new Scanner(System.in);
-      System.out.print("Email: ");
-      String Email = scanner.nextLine();
-      if (userCredentials.containsKey(Email)) {
-        System.out.print("Enter your password: ");
-        String password = scanner.nextLine();
-
-        if (password.equals(userCredentials.get(username))) {
-            System.out.println("Forgot Password " + username + "!");
-            // Add your code here for what happens after login
-            } else {
-                System.out.println("Login");
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Oh no!You're Leaving....Are You Sure)");
+        String response = scanner.nextLine();
+        if (response.equalsIgnoreCase("Yes")) {
+            logout();
+            System.out.println("No Just Kidding.");
+        } else if (response.equalsIgnoreCase("No, Just Kidding")) {
+            System.out.println("Yes,Logout Me");
         } else {
-          
-            System.out.println("Login");
+            System.out.println("Invalid response. Please enter 'Yes' or 'No, Just Kidding'.");
         }
-        scanner.close();
-      }
+
+    
+        
     }
        
